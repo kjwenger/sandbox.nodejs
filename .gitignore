@@ -1,0 +1,4 @@
+/target/app/model/
+/target/app/**/*.js
+/node_modules/
+/npm-debug.log
