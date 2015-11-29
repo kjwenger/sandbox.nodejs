@@ -2,32 +2,32 @@
 [0m[0m
 [0m  Location[0m
 [0m    A new location[0m
-[2K[0G    [32m  √[0m[90m Given I have a new location[0m
-[2K[0G    [32m  √[0m[90m When I get the country code[0m
-[2K[0G    [32m  √[0m[90m And I get the region code[0m
-[2K[0G    [32m  √[0m[90m And I get the postal code[0m
-[2K[0G    [32m  √[0m[90m And I get the city[0m
-[2K[0G    [32m  √[0m[90m And I get the street[0m
-[2K[0G    [32m  √[0m[90m And I get the number[0m
+[2K[0G    [32m  ✓[0m[90m Given I have a new location[0m
+[2K[0G    [32m  ✓[0m[90m When I get the country code[0m
+[2K[0G    [32m  ✓[0m[90m And I get the region code[0m
+[2K[0G    [32m  ✓[0m[90m And I get the postal code[0m
+[2K[0G    [32m  ✓[0m[90m And I get the city[0m
+[2K[0G    [32m  ✓[0m[90m And I get the street[0m
+[2K[0G    [32m  ✓[0m[90m And I get the number[0m
     [36m  - Then country code should be ''[0m
-[2K[0G    [32m  √[0m[90m Given I have a Red Hat Amphitheater location[0m
-[2K[0G    [32m  √[0m[90m When I get the country code[0m
-[2K[0G    [32m  √[0m[90m And I get the region code[0m
-[2K[0G    [32m  √[0m[90m And I get the postal code[0m
-[2K[0G    [32m  √[0m[90m And I get the city[0m
-[2K[0G    [32m  √[0m[90m And I get the street[0m
-[2K[0G    [32m  √[0m[90m And I get the number[0m
+[2K[0G    [32m  ✓[0m[90m Given I have a Red Hat Amphitheater location[0m
+[2K[0G    [32m  ✓[0m[90m When I get the country code[0m
+[2K[0G    [32m  ✓[0m[90m And I get the region code[0m
+[2K[0G    [32m  ✓[0m[90m And I get the postal code[0m
+[2K[0G    [32m  ✓[0m[90m And I get the city[0m
+[2K[0G    [32m  ✓[0m[90m And I get the street[0m
+[2K[0G    [32m  ✓[0m[90m And I get the number[0m
     [36m  - Then country code should be ''[0m
-[2K[0G    [32m  √[0m[90m Given I have a Red Hat Headquarters location[0m
-[2K[0G    [32m  √[0m[90m When I get the country code[0m
-[2K[0G    [32m  √[0m[90m And I get the region code[0m
-[2K[0G    [32m  √[0m[90m And I get the postal code[0m
-[2K[0G    [32m  √[0m[90m And I get the city[0m
-[2K[0G    [32m  √[0m[90m And I get the street[0m
-[2K[0G    [32m  √[0m[90m And I get the number[0m
+[2K[0G    [32m  ✓[0m[90m Given I have a Red Hat Headquarters location[0m
+[2K[0G    [32m  ✓[0m[90m When I get the country code[0m
+[2K[0G    [32m  ✓[0m[90m And I get the region code[0m
+[2K[0G    [32m  ✓[0m[90m And I get the postal code[0m
+[2K[0G    [32m  ✓[0m[90m And I get the city[0m
+[2K[0G    [32m  ✓[0m[90m And I get the street[0m
+[2K[0G    [32m  ✓[0m[90m And I get the number[0m
     [36m  - Then country code should be ''[0m
 
 
-[92m [0m[32m 21 passing[0m[90m (36ms)[0m
+[92m [0m[32m 21 passing[0m[90m (51ms)[0m
 [36m [0m[36m 3 pending[0m
 

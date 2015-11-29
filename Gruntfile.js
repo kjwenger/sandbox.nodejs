@@ -238,9 +238,9 @@ module.exports = function (grunt) {
     });
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-coffee');
-    grunt.loadNpmTasks('grunt-contrib-commands');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-commands');
     grunt.loadNpmTasks('grunt-easy-mongo-fixture');
     grunt.loadNpmTasks('grunt-execute');
     grunt.loadNpmTasks('grunt-cucumberjs');

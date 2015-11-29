@@ -23,7 +23,7 @@
     "grunt-cli": "latest",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-coffee": "latest",
-    "grunt-contrib-commands": "latest",
+    "grunt-commands": "latest",
     "grunt-execute": "latest",
     "gruntify-eslint": "latest",
     "grunt-contrib-jshint": "latest",
