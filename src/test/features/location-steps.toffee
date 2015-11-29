@@ -1,0 +1,77 @@
+location    = require "../../app/model/location"
+Location    = location.Class
+
+module.exports = () ->
+    newLocation = null
+    this.Given /^I have a new location$/, () ->
+        if not location then return new Error(
+            "Expected to have required location module")
+        if not Location then return new Error(
+            "Expected to have Location class")
+        newLocation = new Location()
+        if not newLocation then return new Error(
+            "Expected to have new location")
+    this.Given /^I have the Red Hat Amphitheater location$/, () ->
+        if not location then return new Error(
+            "Expected to have required location module")
+        if not Location then return new Error(
+            "Expected to have Location class")
+        newLocation = new Location(
+            "USA",
+            "NC",
+            "27601",
+            "Raleigh",
+            "S McDowell St",
+            "500")
+        if not newLocation then return new Error(
+            "Expected to have new location")
+    this.Given /^I have the Red Hat Headquarters location$/, () ->
+        if not location then return new Error(
+            "Expected to have required location module")
+        if not Location then return new Error(
+            "Expected to have Location class")
+        newLocation = new Location(
+            "USA",
+            "NC",
+            "27601",
+            "Raleigh",
+            "E Davie St",
+            "100")
+        if not newLocation then return new Error(
+            "Expected to have new location")
+    this.When /^I get the country code$/, () ->
+        if not newLocation.countryCode then return new Error(
+            "Expected to have a country code")
+    this.When /^I get the region code$/, () ->
+        if not newLocation.regionCode then return new Error(
+            "Expected to have a region code")
+    this.When /^I get the postal code$/, () ->
+        if not newLocation.postalCode then return new Error(
+            "Expected to have a postal code")
+    this.When /^I get the city$/, () ->
+        if not newLocation.city then return new Error(
+            "Expected to have a city")
+    this.When /^I get the street$/, () ->
+        if not newLocation.street then return new Error(
+            "Expected to have a street")
+    this.When /^I get the number$/, () ->
+        if not newLocation.number then return new Error(
+            "Expected to have a number")
+    this.Then /^country code should be "(.*)"$/, (countryCode) ->
+        if countryCode isnt newLocation.countryCode then return new Error(
+            "Expected to be country code #{countryCode} and not #{newLocation.countryCode}")
+    this.Then /^region code should be "(.*)"$/, (regionCode) ->
+        if regionCode isnt newLocation.regionCode then return new Error(
+            "Expected to be region code #{regionCode} and not #{newLocation.regionCode}")
+    this.Then /^postal code should be "(.*)"$/, (postalCode) ->
+        if postalCode isnt newLocation.postalCode then return new Error(
+            "Expected to be postal code #{postalCode} and not #{newLocation.postalCode}")
+    this.Then /^city should be "(.*)"$/, (city) ->
+        if city isnt newLocation.city then return new Error(
+            "Expected to be city #{city} and not #{newLocation.city}")
+    this.Then /^street should be "(.*)"$/, (street) ->
+        if street isnt newLocation.street then return new Error(
+            "Expected to be street #{street} and not #{newLocation.street}")
+    this.Then /^number should be "(.*)"$/, (number) ->
+        if number isnt newLocation.number then return new Error(
+            "Expected to be number #{number} and not #{newLocation.number}")

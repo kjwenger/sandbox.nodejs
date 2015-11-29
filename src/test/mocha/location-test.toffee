@@ -1,0 +1,61 @@
+debug    = require("debug")("location-test")
+expect   = require "expect"
+debug "expect=#{expect}"
+location = require "../../app/model/location"
+debug "location=#{location}"
+Location = location.Class
+debug "Location=#{Location}"
+
+describe "Location", () ->
+    describe "A new location", () ->
+        newLocation = null
+        its = () ->
+            it "When I get the country code", () ->
+#                expect(newLocation["countryCode"]).not.to.be(undefined)
+            it "And I get the region code", () ->
+#                expect(newLocation["regionCode"]).not.to.be(undefined)
+            it "And I get the postal code", () ->
+#                expect(newLocation["postalCode"]).not.to.be(undefined)
+            it "And I get the city", () ->
+#                expect(newLocation["city"]).not.to.be(undefined)
+            it "And I get the street", () ->
+#                expect(newLocation["street"]).not.to.be(undefined)
+            it "And I get the number", () ->
+#                expect(newLocation["number"]).not.to.be(undefined)
+            xit "Then country code should be ''", () ->
+#                expect(newLocation["countryCode"]).to.equal("")
+        it "Given I have a new location", () ->
+#            expect(location).to.be.ok()
+#            expect(Location).to.be.ok()
+#            debug "1=#{1}"
+#            debug "expect(1)=#{expect(1)}"
+#            debug "expect(1).to=#{expect(1).to}"
+#            debug "expect(1).to.be=#{expect(1).to.be}"
+#            expect(1).to.be.ok()
+            newLocation = new Location()
+#            expect(newLocation).to.be.ok()
+        its()
+        it "Given I have a Red Hat Amphitheater location", () ->
+#            expect(location).to.be.ok()
+#            expect(Location).to.be.ok()
+            newLocation = new Location(
+                "USA",
+                "NC",
+                "27601",
+                "Raleigh",
+                "S McDowell St",
+                "500")
+#            expect(newLocation).to.be.ok()
+        its()
+        it "Given I have a Red Hat Headquarters location", () ->
+#            expect(location).to.be.ok()
+#            expect(Location).to.be.ok()
+            newLocation = new Location(
+                "USA",
+                "NC",
+                "27601",
+                "Raleigh",
+                "E Davie St",
+                "100")
+#            expect(newLocation).to.be.ok()
+        its()

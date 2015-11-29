@@ -1,0 +1,52 @@
+debug    = require("debug")("location-spec")
+location = require "../../app/model/location"
+Location = location.Class
+
+describe "Location", () ->
+    describe "A new location", () ->
+        newLocation = null
+        its = () ->
+            it "When I get the country code", () ->
+                expect(newLocation["countryCode"]).toBeDefined()
+            it "And I get the region code", () ->
+                expect(newLocation["regionCode"]).toBeDefined()
+            it "And I get the postal code", () ->
+                expect(newLocation["postalCode"]).toBeDefined()
+            it "And I get the city", () ->
+                expect(newLocation["city"]).toBeDefined()
+            it "And I get the street", () ->
+                expect(newLocation["street"]).toBeDefined()
+            it "And I get the number", () ->
+                expect(newLocation["number"]).toBeDefined()
+            xit "Then country code should be ''", () ->
+                expect(newLocation["countryCode"]).toBe("")
+        it "Given I have a new location", () ->
+            expect(location).toBeTruthy()
+            expect(Location).toBeTruthy()
+            newLocation = new Location()
+            expect(newLocation).toBeTruthy()
+        its()
+        it "Given I have a Red Hat Amphitheater location", () ->
+            expect(location).toBeTruthy()
+            expect(Location).toBeTruthy()
+            newLocation = new Location(
+                "USA",
+                "NC",
+                "27601",
+                "Raleigh",
+                "S McDowell St",
+                "500")
+            expect(newLocation).toBeTruthy()
+        its()
+        it "Given I have a Red Hat Headquarters location", () ->
+            expect(location).toBeTruthy()
+            expect(Location).toBeTruthy()
+            newLocation = new Location(
+                "USA",
+                "NC",
+                "27601",
+                "Raleigh",
+                "E Davie St",
+                "100")
+            expect(newLocation).toBeTruthy()
+        its()

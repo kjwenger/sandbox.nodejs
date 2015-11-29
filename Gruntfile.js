@@ -116,6 +116,42 @@ module.exports = function (grunt) {
                     ]
                 },
                 src: toffee_script
+            },
+            'toffee_location-steps': {
+                options: {
+                    args: [
+                        '--bare',
+                        '--output',
+                        'target/test/features',
+                        '--compile',
+                        'src/test/features/location-steps.toffee'
+                    ]
+                },
+                src: toffee_script
+            },
+            'toffee_location-spec': {
+                options: {
+                    args: [
+                        '--bare',
+                        '--output',
+                        'target/test/specs',
+                        '--compile',
+                        'src/test/specs/location-spec.toffee'
+                    ]
+                },
+                src: toffee_script
+            },
+            'toffee_location-test': {
+                options: {
+                    args: [
+                        '--bare',
+                        '--output',
+                        'target/test/mocha',
+                        '--compile',
+                        'src/test/mocha/location-test.toffee'
+                    ]
+                },
+                src: toffee_script
             }
         },
         eslint: {
@@ -166,12 +202,38 @@ module.exports = function (grunt) {
                 // Target-specific file lists and/or options go here.
             }
         },
+        cucumberjs: {
+            options: {
+                steps: "target/test/features/",
+                format: 'html',
+                output: 'target/test/features/report.html',
+                theme: 'bootstrap',
+                debug: false
+            },
+            features: [
+                'src/test/features/location.feature'
+            ]
+        },
         jasmine_node: {
             options: {
                 specNameMatcher: 'spec',
-                forceExit: true
+                forceExit: true,
+                verbose: true
             },
-            test: ['src/test/']
+            test: [
+                'target/test/specs/'
+            ]
+        },
+        mochaTest: {
+            test: {
+                options: {
+                    reporter: 'spec',
+                    captureFile: 'results.txt',
+                    quiet: false,
+                    clearRequireCache: false
+                },
+                src: ['target/test/mocha/**/*.js']
+            }
         }
     });
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -181,7 +243,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-easy-mongo-fixture');
     grunt.loadNpmTasks('grunt-execute');
+    grunt.loadNpmTasks('grunt-cucumberjs');
     grunt.loadNpmTasks('grunt-jasmine-node');
+    grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-jsduck');
     grunt.loadNpmTasks('grunt-mkdir');
     grunt.loadNpmTasks('gruntify-eslint');
@@ -207,9 +271,13 @@ module.exports = function (grunt) {
         'jshint:all'
     ]);
     grunt.registerTask('test', [
-        'jasmine_node:test'
+        'jasmine_node:test',
+        'mochaTest',
+        'cucumberjs:features'
     ]);
-    grunt.registerTask('doc', ['jsduck']);
+    grunt.registerTask('doc', [
+        'jsduck'
+    ]);
     grunt.registerTask('default', [
         'compile',
         'lint',
