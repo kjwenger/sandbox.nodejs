@@ -36,6 +36,20 @@ module.exports = function (grunt) {
                 cmd: 'bbs mongo stop 2.0.49'
             }
         },
+        toffee: {
+            options: {
+                bare: true,
+                join: false,
+                sourceMap: true
+            },
+            'target/app/constants.js':  'src/main/toffee/constants.toffee',
+            'target/app/utils.js': 'src/main/toffee/utils.toffee',
+            'target/app/model/location.js': 'src/main/toffee/model/location.toffee',
+            'target/app/model/address.js': 'src/main/toffee/model/address.toffee',
+            'target/test/features/location-steps.js': 'src/test/features/location-steps.toffee',
+            'target/test/specs/location-spec.js': 'src/test/specs/location-spec.toffee',
+            'target/test/mocha/location-test.js': 'src/test/mocha/location-test.toffee'
+        },
         easy_mongo_fixture: {
             load: {
                 options: {
@@ -69,90 +83,6 @@ module.exports = function (grunt) {
             }
         },
         execute: {
-            toffee_constants: {
-                options: {
-                    args: [
-                        '--bare',
-                        '--output',
-                        'target/app',
-                        '--compile',
-                        'src/main/toffee/constants.toffee'
-                    ]
-                },
-                src: toffee_script
-            },
-            toffee_utils: {
-                options: {
-                    args: [
-                        '--bare',
-                        '--output',
-                        'target/app',
-                        '--compile',
-                        'src/main/toffee/utils.toffee'
-                    ]
-                },
-                src: toffee_script
-            },
-            toffee_location: {
-                options: {
-                    args: [
-                        '--bare',
-                        '--output',
-                        'target/app/model',
-                        '--compile',
-                        'src/main/toffee/model/location.toffee'
-                    ]
-                },
-                src: toffee_script
-            },
-            toffee_address: {
-                options: {
-                    args: [
-                        '--bare',
-                        '--output',
-                        'target/app/model',
-                        '--compile',
-                        'src/main/toffee/model/address.toffee'
-                    ]
-                },
-                src: toffee_script
-            },
-            'toffee_location-steps': {
-                options: {
-                    args: [
-                        '--bare',
-                        '--output',
-                        'target/test/features',
-                        '--compile',
-                        'src/test/features/location-steps.toffee'
-                    ]
-                },
-                src: toffee_script
-            },
-            'toffee_location-spec': {
-                options: {
-                    args: [
-                        '--bare',
-                        '--output',
-                        'target/test/specs',
-                        '--compile',
-                        'src/test/specs/location-spec.toffee'
-                    ]
-                },
-                src: toffee_script
-            },
-            'toffee_location-test': {
-                options: {
-                    args: [
-                        '--bare',
-                        '--output',
-                        'target/test/mocha',
-                        '--compile',
-                        'src/test/mocha/location-test.toffee'
-                    ]
-                },
-                src: toffee_script
-            }
         },
         eslint: {
             options: {
@@ -238,6 +168,7 @@ module.exports = function (grunt) {
     });
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-coffee');
+    grunt.loadNpmTasks('grunt-toffee');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-commands');
@@ -265,7 +196,7 @@ module.exports = function (grunt) {
         'easy_mongo_fixture:save'
     ]);
     grunt.registerTask('compile', [
-        'execute'
+        'toffee'
     ]);
     grunt.registerTask('lint', [
         'jshint:all'

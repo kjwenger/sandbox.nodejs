@@ -1,5 +1,6 @@
 /target/app/model/
 /target/app/**/*.js
+/target/app/**/*.map
 /target/test/
 /node_modules/
 /npm-debug.log
