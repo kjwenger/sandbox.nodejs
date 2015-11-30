@@ -158,7 +158,7 @@ module.exports = function (grunt) {
             test: {
                 options: {
                     reporter: 'spec',
-                    captureFile: 'results.txt',
+                    captureFile: 'target/test/mocha/results.txt',
                     quiet: false,
                     clearRequireCache: false
                 },
