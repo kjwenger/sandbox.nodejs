@@ -1,0 +1,5 @@
+{
+    "name": "sandbox_cpp",
+    "version": "0.0.1",
+    "main": "js/addon.js"
+}

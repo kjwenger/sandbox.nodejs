@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		                    http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.u14n</groupId>
+		<artifactId>sandbox</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>com.u14n</groupId>
+	<artifactId>sandbox.nodejs</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>${project.artifactId}</name>
+	<description>Generic Swing Application</description>
+	<packaging>jar</packaging>
+	<url>https://github.com/kjwenger/${project.artifactId}</url>
+	<scm>
+		<url>${project.url}</url>
+		<connection>scm:git:git://github.com/kjwenger/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:git@github.com:kjwenger/${project.artifactId}.git</developerConnection>
+	</scm>
+	<issueManagement>
+		<url>${project.url}/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>pl.allegro</groupId>
+				<artifactId>grunt-maven-plugin</artifactId>
+				<version>1.5.0</version>
+				<configuration>
+					<jsSourceDirectory>src/main</jsSourceDirectory>
+					<gruntOptions>
+						<gruntOption>--verbose</gruntOption>
+					</gruntOptions>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>npm</goal>
+							<goal>grunt</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
