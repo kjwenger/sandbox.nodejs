@@ -24,7 +24,7 @@
             "include_dirs" : [
                 "<!(node -e \"require('nan')\")",
                 "cpp",
-                "../../../sandbox.cpp/src/main/cpp",
+                "../../../sandbox.cpp/src/include/cpp",
             ]
         }
     ],
