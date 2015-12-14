@@ -19,7 +19,7 @@ NAN_MODULE_INIT(InitAll) {
 //			Nan::GetFunction(Nan::New<v8::FunctionTemplate>(callback)).ToLocalChecked());
 
 	// Passing target down to the next NAN_MODULE_INIT
-//	Topic::Init (target);
+	Topic::Init(target);
 }
 
 NODE_MODULE(sandbox_cpp, InitAll)

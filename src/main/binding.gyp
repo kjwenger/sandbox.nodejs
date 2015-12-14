@@ -18,11 +18,12 @@
             "target_dir": "../../target/build",
             "target_name": "sandbox_cpp",
             "sources": [
-                "cpp/addon.cpp",
+                "cpp/ontology/topic.cpp",
                 "cpp/addon.cpp"
             ],
             "include_dirs" : [
                 "<!(node -e \"require('nan')\")",
+                "cpp",
                 "../../../sandbox.cpp/src/main/cpp",
             ]
         }

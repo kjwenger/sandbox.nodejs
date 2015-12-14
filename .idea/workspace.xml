@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59f0d0ec-ea54-4823-ab63-eec002bc3d8f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/cpp/addon.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/js/addon.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/binding.gyp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/build.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/build.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/clean.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/clean.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/cpp/ontology/topic.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/cpp/ontology/topic.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sandbox.nodejs.iml" afterPath="$PROJECT_DIR$/.idea/sandbox.nodejs.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/sandbox_nodejs_node_modules.xml" afterPath="$PROJECT_DIR$/.idea/libraries/sandbox_nodejs_node_modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/addon.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/addon.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/binding.gyp" afterPath="$PROJECT_DIR$/src/main/binding.gyp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/ontology/topic.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/ontology/topic.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/ontology/topic.hpp" afterPath="$PROJECT_DIR$/src/main/cpp/ontology/topic.hpp" />
     </list>
     <ignored path="sandbox.nodejs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,31 +43,18 @@
       <file leaf-file-name="binding.gyp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/binding.gyp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-              <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="612">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addon.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="addon.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/cpp/addon.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6504348" vertical-offset="0" max-vertical-offset="575">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="media.gyp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/node-gyp/gyp/tools/emacs/testdata/media.gyp">
-          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0" vertical-offset="8965" max-vertical-offset="18887">
-              <caret line="545" column="12" selection-start-line="545" selection-start-column="12" selection-end-line="545" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -105,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="topic.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="topic.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/cpp/ontology/topic.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8521739" vertical-offset="190" max-vertical-offset="833">
+              <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -118,8 +93,8 @@
       <file leaf-file-name="topic.hpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/cpp/ontology/topic.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-              <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -159,15 +134,16 @@
         <option value="$PROJECT_DIR$/src/test/features/location-steps.toffee" />
         <option value="$PROJECT_DIR$/src/main/package.json" />
         <option value="$PROJECT_DIR$/src/main/cpp/NativeExtension.cpp" />
-        <option value="$PROJECT_DIR$/src/main/cpp/ontology/topic.hpp" />
         <option value="$PROJECT_DIR$/src/main/js/addon.js" />
         <option value="$PROJECT_DIR$/src/main/clean.sh" />
         <option value="$PROJECT_DIR$/src/main/build.sh" />
         <option value="$PROJECT_DIR$/src/main/clean.cmd" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/main/binding.gyp" />
         <option value="$PROJECT_DIR$/src/main/build.cmd" />
+        <option value="$PROJECT_DIR$/src/main/cpp/ontology/topic.hpp" />
         <option value="$PROJECT_DIR$/src/main/cpp/addon.cpp" />
+        <option value="$PROJECT_DIR$/src/main/binding.gyp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/ontology/topic.cpp" />
       </list>
     </option>
   </component>
@@ -281,6 +257,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox.nodejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox.nodejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -674,7 +672,7 @@
       <option name="number" value="Default" />
       <updated>1448721011206</updated>
       <workItem from="1450101186850" duration="90000" />
-      <workItem from="1450101293394" duration="3883000" />
+      <workItem from="1450101293394" duration="6086000" />
     </task>
     <task id="LOCAL-00001" summary="moved mocha test output and ignored generated tests">
       <created>1448901515471</created>
@@ -686,7 +684,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3973000" />
+    <option name="totallyTimeSpent" value="6176000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="960" height="1050" extended-state="0" />
@@ -705,7 +703,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32444444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24444444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32897604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1045,22 +1043,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/cpp/ontology/topic.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/cpp/ontology/topic.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="890">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/js/addon.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
@@ -1103,17 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/node-gyp/gyp/tools/emacs/testdata/media.gyp">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0" vertical-offset="8965" max-vertical-offset="18887">
-          <caret line="545" column="12" selection-start-line="545" selection-start-column="12" selection-end-line="545" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/build.cmd">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
@@ -1122,18 +1093,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/binding.gyp">
+    <entry file="file://$PROJECT_DIR$/node_modules/node-gyp/gyp/tools/emacs/testdata/media.gyp">
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.74862385" vertical-offset="102" max-vertical-offset="18887">
+          <caret line="30" column="7" selection-start-line="28" selection-start-column="6" selection-end-line="30" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/cpp/addon.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6504348" vertical-offset="0" max-vertical-offset="575">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/binding.gyp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="37" max-vertical-offset="612">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/ontology/topic.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cpp/ontology/topic.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8521739" vertical-offset="190" max-vertical-offset="833">
+          <caret line="40" column="57" selection-start-line="40" selection-start-column="57" selection-end-line="40" selection-end-column="57" />
           <folding />
         </state>
       </provider>
