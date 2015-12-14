@@ -13,7 +13,7 @@ private:
 
 	static NAN_METHOD(New);
 	static NAN_METHOD(GetName);
-	static NAN_METHOD(SetName);
+//	static NAN_METHOD(SetName);
 	static Nan::Persistent<v8::Function> constructor;
 
 	std::string name;
