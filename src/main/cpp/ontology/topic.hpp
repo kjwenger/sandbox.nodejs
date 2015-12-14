@@ -1,18 +1,20 @@
 #pragma once
 
-#include "v8cppwrapper.h"
-#include "com/u14n/sandbox/cpp/model/ontology/Topic.hpp"
+#include <nan.h>
+#include <string>
 
-//using namespace com::u14n::sandbox::cpp::model::ontology;
-
-struct Topic {
+class Topic: public Nan::ObjectWrap {
 public:
-    Topic() {
-    }
-    ~Topic() {
-    }
+	static NAN_MODULE_INIT(Init);
 
+private:
+	explicit Topic(std::string newName = std::string(""));
+	~Topic();
+
+	static NAN_METHOD(New);
+	static NAN_METHOD(GetName);
+//	static NAN_METHOD(SetName);
+	static Nan::Persistent<v8::Function> constructor;
+
+	std::string name;
 };
-
-v8::CppWrapper<Topic> topic_wrapper;
-//topic_wrapper.SetAccessor<std::string>("name", &Topic::getName, &Topic::setName);
