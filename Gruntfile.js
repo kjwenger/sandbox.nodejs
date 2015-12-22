@@ -47,6 +47,7 @@ module.exports = function (grunt) {
             'target/app/model/location.js': 'src/main/toffee/model/location.toffee',
             'target/app/model/address.js': 'src/main/toffee/model/address.toffee',
             'target/test/features/location-steps.js': 'src/test/features/location-steps.toffee',
+            'target/test/features/topic-steps.js': 'src/test/features/topic-steps.toffee',
             'target/test/specs/location-spec.js': 'src/test/specs/location-spec.toffee',
             'target/test/mocha/location-test.js': 'src/test/mocha/location-test.toffee'
         },
@@ -141,7 +142,8 @@ module.exports = function (grunt) {
                 debug: false
             },
             features: [
-                'src/test/features/location.feature'
+                'src/test/features/location.feature',
+                'src/test/features/topic.feature'
             ]
         },
         jasmine_node: {

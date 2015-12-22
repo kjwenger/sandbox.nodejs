@@ -1,5 +1,8 @@
+debug       = require("debug")("location-steps")
 location    = require "../../app/model/location"
+debug "location=#{location}"
 Location    = location.Class
+debug "Location=" + Location
 
 module.exports = () ->
     newLocation = null
@@ -9,6 +12,7 @@ module.exports = () ->
         if not Location then return new Error(
             "Expected to have Location class")
         newLocation = new Location()
+        debug "newLocation=#{newLocation}"
         if not newLocation then return new Error(
             "Expected to have new location")
     this.Given /^I have the Red Hat Amphitheater location$/, () ->
@@ -23,6 +27,7 @@ module.exports = () ->
             "Raleigh",
             "S McDowell St",
             "500")
+        debug "newLocation=#{newLocation}"
         if not newLocation then return new Error(
             "Expected to have new location")
     this.Given /^I have the Red Hat Headquarters location$/, () ->
@@ -37,9 +42,11 @@ module.exports = () ->
             "Raleigh",
             "E Davie St",
             "100")
+        debug "newLocation=#{newLocation}"
         if not newLocation then return new Error(
             "Expected to have new location")
     this.When /^I get the country code$/, () ->
+        debug "newLocation.countryCode=#{newLocation.countryCode}"
         if not newLocation.countryCode then return new Error(
             "Expected to have a country code")
     this.When /^I get the region code$/, () ->
@@ -58,6 +65,8 @@ module.exports = () ->
         if not newLocation.number then return new Error(
             "Expected to have a number")
     this.Then /^country code should be "(.*)"$/, (countryCode) ->
+        debug "countryCode=#{countryCode}"
+        debug "countryCode isnt newLocation.countryCode=#{countryCode isnt newLocation.countryCode}"
         if countryCode isnt newLocation.countryCode then return new Error(
             "Expected to be country code #{countryCode} and not #{newLocation.countryCode}")
     this.Then /^region code should be "(.*)"$/, (regionCode) ->

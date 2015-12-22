@@ -12,18 +12,20 @@ debug     = require("debug")("location")
 constants = require "../constants"
 
 module.exports =
-    Class           : (countryCode,
-                       regionCode,
-                       postalCode,
-                       city,
-                       street,
-                       number) ->
-        this.countryCode = countryCode or constants.STRING_BLANK
-        this.regionCode  = regionCode  or constants.STRING_BLANK
-        this.postalCode  = postalCode  or constants.STRING_BLANK
-        this.city        = city        or constants.STRING_BLANK
-        this.street      = street      or constants.STRING_BLANK
-        this.number      = number      or constants.STRING_BLANK
+    Class           : (newCountryCode,
+                       newRegionCode,
+                       newPostalCode,
+                       newCity,
+                       newStreet,
+                       newNumber) ->
+        debug "newCountryCode=#{newCountryCode}"
+        this.countryCode = newCountryCode or constants.STRING_BLANK
+        this.regionCode  = newRegionCode  or constants.STRING_BLANK
+        this.postalCode  = newPostalCode  or constants.STRING_BLANK
+        this.city        = newCity        or constants.STRING_BLANK
+        this.street      = newStreet      or constants.STRING_BLANK
+        this.number      = newNumber      or constants.STRING_BLANK
+        debug "this.countryCode=#{this.countryCode}"
         this
     model           :
         countryCode : constants.STRING_BLANK

@@ -4,7 +4,7 @@ debug "expect=#{expect}"
 location = require "../../app/model/location"
 debug "location=#{location}"
 Location = location.Class
-debug "Location=#{Location}"
+debug "Location=" + Location
 
 describe "Location", () ->
     describe "A new location", () ->

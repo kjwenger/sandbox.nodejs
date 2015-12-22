@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "debug": "~2.2.0",
+    "kerberos": "0.0.17",
     "mongodb": "~2.1.1",
     "mongoose": "~4.3.1",
     "nan": "~2.1.0"

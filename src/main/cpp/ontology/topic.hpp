@@ -3,7 +3,7 @@
 #include <nan.h>
 #include <string>
 
-class Topic: public Nan::ObjectWrap {
+class Topic : public Nan::ObjectWrap {
 public:
 	static NAN_MODULE_INIT(Init);
 
