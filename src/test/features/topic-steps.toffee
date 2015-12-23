@@ -1,5 +1,5 @@
 debug       = require("debug")("topic-steps")
-sandbox_cpp = require "../../../src/main/build/Release/sandbox_cpp"
+sandbox_cpp = require "../../build/Release/sandbox_cpp"
 debug "sandbox_cpp=#{sandbox_cpp}"
 Topic       = sandbox_cpp.Topic
 debug "Topic=" + Topic

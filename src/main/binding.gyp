@@ -15,7 +15,6 @@
     },
     "targets": [
         {
-            "target_dir": "../../target/build",
             "target_name": "sandbox_cpp",
             "sources": [
                 "cpp/ontology/topic.cpp",

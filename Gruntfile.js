@@ -15,17 +15,37 @@ module.exports = function (grunt) {
             }
         },
         clean: {
+            build: [
+                'src/main/build',
+                'target/build'
+            ],
             test_databases: [
                 '<%= yeoman.databases.dbpath %>'
             ]
         },
         mkdir: {
+            build: {
+                options: {
+                    create: [
+                        'target/build'
+                    ]
+                }
+            },
             test_databases: {
                 options: {
                     create: [
                         '<%= yeoman.databases.dbpath %>'
                     ]
                 }
+            }
+        },
+        symlink: {
+            options: {
+                overwrite: true
+            },
+            build: {
+                src: 'target/build',
+                dest: 'src/main/build'
             }
         },
         command: {
@@ -84,6 +104,42 @@ module.exports = function (grunt) {
             }
         },
         execute: {
+            clean_addon: {
+                options: {
+                    cwd: 'src/main',
+                    args: [
+                        'clean'
+                    ]
+                },
+                src: [
+                    'node_modules/node-gyp/bin/node-gyp.js'
+                ]
+            },
+            configure_addon: {
+                options: {
+                    cwd: 'src/main',
+                    args: [
+                        'configure'
+                    ]
+                },
+                src: [
+                    'node_modules/node-gyp/bin/node-gyp.js'
+                ]
+            },
+            build_addon: {
+                options: {
+                    cwd: 'src/main',
+                    args: [
+                        'build'
+                    ]
+                },
+                src: [
+                    'node_modules/node-gyp/bin/node-gyp.js'
+                ]
+            }
+        },
+        gyp: {
+            addon: {}
         },
         eslint: {
             options: {
@@ -175,6 +231,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-commands');
     grunt.loadNpmTasks('grunt-easy-mongo-fixture');
+    grunt.loadNpmTasks('grunt-contrib-symlink');
+    grunt.loadNpmTasks('grunt-node-gyp');
     grunt.loadNpmTasks('grunt-execute');
     grunt.loadNpmTasks('grunt-cucumberjs');
     grunt.loadNpmTasks('grunt-jasmine-node');
@@ -200,6 +258,15 @@ module.exports = function (grunt) {
     grunt.registerTask('compile', [
         'toffee'
     ]);
+    grunt.registerTask('addon', [
+        'mkdir:build',
+        'symlink:build',
+        'execute:clean_addon',
+        'mkdir:build',
+        'symlink:build',
+        'execute:configure_addon',
+        'execute:build_addon'
+    ]);
     grunt.registerTask('lint', [
         'jshint:all'
     ]);
@@ -213,6 +280,7 @@ module.exports = function (grunt) {
     ]);
     grunt.registerTask('default', [
         'compile',
+        'addon',
         'lint',
         'test'
     ]);
