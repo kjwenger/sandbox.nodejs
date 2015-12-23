@@ -20,11 +20,9 @@
                     "target_name": "sandbox_cpp",
                     "sources": [
                         "cpp/ontology/topic.cpp",
+                        "cpp/taxonomy/genus.cpp",
                         "cpp/taxonomy/species.cpp",
                         "cpp/addon.cpp"
-                    ],
-                    "sources_": [
-                        "cpp/taxonomy/species.cpp"
                     ],
                     "include_dirs": [
                         "<!(node -e \"require('nan')\")",

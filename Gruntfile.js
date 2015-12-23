@@ -195,7 +195,7 @@ module.exports = function (grunt) {
                 LD_LIBRARY_PATH: '../sandbox.cpp/build'
             },
             debug: {
-                DEBUG: '*'
+                DEBUG: 'species-steps'
             }
         },
         cucumberjs: {

@@ -1,26 +1,65 @@
 debug       = require("debug")("species-steps")
 sandbox_cpp = require "../../build/Release/sandbox_cpp"
 debug "sandbox_cpp=#{sandbox_cpp}"
+Genus       = sandbox_cpp.Genus
+debug "Genus=" + Genus
 Species     = sandbox_cpp.Species
 debug "Species=" + Species
 
 module.exports = () ->
+    newGenus = null
     newSpecies = null
+    this.Given /^I have a new genus$/, () ->
+        if not sandbox_cpp then return new Error(
+          "Expected to have required sandbox_cpp module")
+        if not Genus then return new Error(
+          "Expected to have Genus class")
+        newGenus = new Genus()
+        debug "newGenus.getName()=#{newGenus.getName()}"
+        if not newGenus then return new Error(
+          "Expected to have new genus")
+    this.Given /^I have the "([^"]*)" genus$/, (name) ->
+        if not sandbox_cpp then return new Error(
+          "Expected to have required sandbox_cpp module")
+        if not Genus then return new Error(
+          "Expected to have Genus class")
+        newGenus = new Genus(name)
+        debug "newGenus.getName()=#{newGenus.getName()}"
+        if not newGenus then return new Error(
+          "Expected to have new genus")
+    this.When /^I get the genus name$/, () ->
+        debug "newGenus.getName=#{newGenus.getName}"
+        if not newGenus.getName then return new Error(
+          "Expected to have a name")
+    this.When /^I set the genus name$/, () ->
+        debug "newGenus.setName=#{newGenus.setName}"
+        if not newGenus.setName then return new Error(
+          "Expected to have a name")
+    this.When /^I set the genus name to "([^"]*)"$/, (name) ->
+        debug "name=#{name}"
+        debug "newGenus.getName()=#{newGenus.getName()}"
+        newGenus.setName name
+        debug "newGenus.getName()=#{newGenus.getName()}"
+    this.Then /^the genus name should be "([^"]*)"$/, (name) ->
+        debug "name=#{name}"
+        debug "newGenus.getName()=#{newGenus.getName()}"
+        if name isnt newGenus.getName() then return new Error(
+          "Expected to be name #{name} and not #{newGenus.getName()}")
     this.Given /^I have a new species$/, () ->
         if not sandbox_cpp then return new Error(
-            "Expected to have required species module")
+            "Expected to have required sandbox_cpp module")
         if not Species then return new Error(
             "Expected to have Species class")
-        newSpecies = new Species("")
+        newSpecies = new Species(newGenus)
         debug "newSpecies.getName()=#{newSpecies.getName()}"
         if not newSpecies then return new Error(
             "Expected to have new species")
-    this.Given /^I have the "(.*)" species$/, (name) ->
+    this.Given /^I have the "([^"]*)" species$/, (name) ->
         if not sandbox_cpp then return new Error(
-            "Expected to have required species module")
+            "Expected to have required sandbox_cpp module")
         if not Species then return new Error(
             "Expected to have Species class")
-        newSpecies = new Species(name)
+        newSpecies = new Species(newGenus, name)
         debug "newSpecies.getName()=#{newSpecies.getName()}"
         if not newSpecies then return new Error(
             "Expected to have new species")
@@ -37,7 +76,7 @@ module.exports = () ->
         debug "newSpecies.getName()=#{newSpecies.getName()}"
         newSpecies.setName name
         debug "newSpecies.getName()=#{newSpecies.getName()}"
-    this.Then /^the species name should be "(.*)"$/, (name) ->
+    this.Then /^the species name should be "([^"]*)"$/, (name) ->
         debug "name=#{name}"
         debug "newSpecies.getName()=#{newSpecies.getName()}"
         if name isnt newSpecies.getName() then return new Error(
