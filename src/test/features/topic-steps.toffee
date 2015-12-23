@@ -1,8 +1,8 @@
 debug       = require("debug")("topic-steps")
 sandbox_cpp = require "../../build/Release/sandbox_cpp"
-debug "sandbox_cpp=#{sandbox_cpp}"
+#debug "sandbox_cpp=#{sandbox_cpp}"
 Topic       = sandbox_cpp.Topic
-debug "Topic=" + Topic
+#debug "Topic=" + Topic
 
 module.exports = () ->
     newTopic = null
@@ -12,7 +12,8 @@ module.exports = () ->
         if not Topic then return new Error(
             "Expected to have Topic class")
         newTopic = new Topic("")
-        debug "newTopic=#{newTopic}"
+#        newTopic = name: ""
+#        debug "newTopic=#{newTopic}"
         if not newTopic then return new Error(
             "Expected to have new topic")
     this.Given /^I have the USA topic$/, () ->
@@ -21,11 +22,13 @@ module.exports = () ->
         if not Topic then return new Error(
             "Expected to have Topic class")
         newTopic = new Topic("USA")
+#        newTopic = name: "USA"
+#        debug "newTopic=#{newTopic}"
         if not newTopic then return new Error(
             "Expected to have new topic")
-    this.When /^I get the name$/, () ->
+    this.When /^I get the topic name$/, () ->
         if not newTopic.name then return new Error(
             "Expected to have a name")
-    this.Then /^name should be "(.*)"$/, (name) ->
+    this.Then /^the topic name should be "(.*)"$/, (name) ->
         if name isnt newTopic.name then return new Error(
             "Expected to be name #{name} and not #{newTopic.name}")

@@ -15,7 +15,7 @@ NAN_MODULE_INIT(Topic::Init) {
 }
 
 Topic::Topic(std::string newName) :
-		name(name) {
+		name(newName) {
 }
 
 Topic::~Topic() {

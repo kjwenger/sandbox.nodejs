@@ -68,6 +68,7 @@ module.exports = function (grunt) {
             'target/app/model/address.js': 'src/main/toffee/model/address.toffee',
             'target/test/features/location-steps.js': 'src/test/features/location-steps.toffee',
             'target/test/features/topic-steps.js': 'src/test/features/topic-steps.toffee',
+            'target/test/features/species-steps.js': 'src/test/features/species-steps.toffee',
             'target/test/specs/location-spec.js': 'src/test/specs/location-spec.toffee',
             'target/test/mocha/location-test.js': 'src/test/mocha/location-test.toffee'
         },
@@ -189,17 +190,25 @@ module.exports = function (grunt) {
                 // Target-specific file lists and/or options go here.
             }
         },
+        env: {
+            lib: {
+                LD_LIBRARY_PATH: '/com.u14n/sandbox/sandbox.cpp/build'
+            }
+        },
         cucumberjs: {
             options: {
                 steps: "target/test/features/",
-                format: 'html',
+                format: 'pretty',
                 output: 'target/test/features/report.html',
+                formatHtml: 'html',
+                saveJson: true,
                 theme: 'bootstrap',
                 debug: false
             },
             features: [
                 'src/test/features/location.feature',
-                'src/test/features/topic.feature'
+                'src/test/features/topic.feature',
+                'src/test/features/species.feature'
             ]
         },
         jasmine_node: {
@@ -234,6 +243,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-symlink');
     grunt.loadNpmTasks('grunt-node-gyp');
     grunt.loadNpmTasks('grunt-execute');
+    grunt.loadNpmTasks('grunt-env');
     grunt.loadNpmTasks('grunt-cucumberjs');
     grunt.loadNpmTasks('grunt-jasmine-node');
     grunt.loadNpmTasks('grunt-mocha-test');
@@ -273,6 +283,7 @@ module.exports = function (grunt) {
     grunt.registerTask('test', [
         'jasmine_node:test',
         'mochaTest',
+        'env:lib',
         'cucumberjs:features'
     ]);
     grunt.registerTask('doc', [

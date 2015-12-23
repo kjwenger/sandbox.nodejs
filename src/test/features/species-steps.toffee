@@ -1,0 +1,34 @@
+debug       = require("debug")("species-steps")
+sandbox_cpp = require "../../build/Release/sandbox_cpp"
+#debug "sandbox_cpp=#{sandbox_cpp}"
+Species       = sandbox_cpp.Species
+#debug "Species=" + Species
+
+module.exports = () ->
+    newSpecies = null
+    this.Given /^I have a new species$/, () ->
+        if not sandbox_cpp then return new Error(
+            "Expected to have required species module")
+        if not Species then return new Error(
+            "Expected to have Species class")
+        newSpecies = new Species("")
+#        newSpecies = name: ""
+#        debug "newSpecies=#{newSpecies}"
+        if not newSpecies then return new Error(
+            "Expected to have new species")
+    this.Given /^I have the Lupus species$/, () ->
+        if not sandbox_cpp then return new Error(
+            "Expected to have required species module")
+        if not Species then return new Error(
+            "Expected to have Species class")
+        newSpecies = new Species("Lupus")
+#        newSpecies = name: "Lupus"
+#        debug "newSpecies=#{newSpecies}"
+        if not newSpecies then return new Error(
+            "Expected to have new species")
+    this.When /^I get the species name$/, () ->
+        if not newSpecies.name then return new Error(
+            "Expected to have a name")
+    this.Then /^the species name should be "(.*)"$/, (name) ->
+        if name isnt newSpecies.name then return new Error(
+            "Expected to be name #{name} and not #{newSpecies.name}")

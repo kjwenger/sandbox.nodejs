@@ -13,18 +13,32 @@
             "-fno-exceptions"
         ]
     },
-    "targets": [
-        {
-            "target_name": "sandbox_cpp",
-            "sources": [
-                "cpp/ontology/topic.cpp",
-                "cpp/addon.cpp"
-            ],
-            "include_dirs" : [
-                "<!(node -e \"require('nan')\")",
-                "cpp",
-                "../../../sandbox.cpp/src/include/cpp",
+    "conditions": [
+        ["OS=='linux'", {
+            "targets": [
+                {
+                    "target_name": "sandbox_cpp",
+                    "sources": [
+                        "cpp/ontology/topic.cpp",
+                        "cpp/taxonomy/species.cpp",
+                        "cpp/addon.cpp"
+                    ],
+                    "sources_": [
+                        "cpp/taxonomy/species.cpp"
+                    ],
+                    "include_dirs": [
+                        "<!(node -e \"require('nan')\")",
+                        "cpp",
+                        "/com.u14n/sandbox/sandbox.cpp/src/include/cpp",
+                    ],
+                    "link_settings": {
+                        "libraries": [
+                            "-L /com.u14n/sandbox/sandbox.cpp/build",
+                            "-l sandbox"
+                        ]
+                    }
+                }
             ]
-        }
-    ],
+        }]
+    ]
 }
