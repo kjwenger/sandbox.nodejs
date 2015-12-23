@@ -192,7 +192,7 @@ module.exports = function (grunt) {
         },
         env: {
             lib: {
-                LD_LIBRARY_PATH: '/com.u14n/sandbox/sandbox.cpp/build'
+                LD_LIBRARY_PATH: '../sandbox.cpp/build'
             }
         },
         cucumberjs: {
