@@ -1,8 +1,8 @@
 debug       = require("debug")("species-steps")
 sandbox_cpp = require "../../build/Release/sandbox_cpp"
-#debug "sandbox_cpp=#{sandbox_cpp}"
-Species       = sandbox_cpp.Species
-#debug "Species=" + Species
+debug "sandbox_cpp=#{sandbox_cpp}"
+Species     = sandbox_cpp.Species
+debug "Species=" + Species
 
 module.exports = () ->
     newSpecies = null
@@ -12,23 +12,33 @@ module.exports = () ->
         if not Species then return new Error(
             "Expected to have Species class")
         newSpecies = new Species("")
-#        newSpecies = name: ""
-#        debug "newSpecies=#{newSpecies}"
+        debug "newSpecies.getName()=#{newSpecies.getName()}"
         if not newSpecies then return new Error(
             "Expected to have new species")
-    this.Given /^I have the Lupus species$/, () ->
+    this.Given /^I have the "(.*)" species$/, (name) ->
         if not sandbox_cpp then return new Error(
             "Expected to have required species module")
         if not Species then return new Error(
             "Expected to have Species class")
-        newSpecies = new Species("Lupus")
-#        newSpecies = name: "Lupus"
-#        debug "newSpecies=#{newSpecies}"
+        newSpecies = new Species(name)
+        debug "newSpecies.getName()=#{newSpecies.getName()}"
         if not newSpecies then return new Error(
             "Expected to have new species")
     this.When /^I get the species name$/, () ->
-        if not newSpecies.name then return new Error(
+        debug "newSpecies.getName=#{newSpecies.getName}"
+        if not newSpecies.getName then return new Error(
             "Expected to have a name")
+    this.When /^I set the species name$/, () ->
+        debug "newSpecies.setName=#{newSpecies.setName}"
+        if not newSpecies.setName then return new Error(
+          "Expected to have a name")
+    this.When /^I set the species name to "([^"]*)"$/, (name) ->
+        debug "name=#{name}"
+        debug "newSpecies.getName()=#{newSpecies.getName()}"
+        newSpecies.setName name
+        debug "newSpecies.getName()=#{newSpecies.getName()}"
     this.Then /^the species name should be "(.*)"$/, (name) ->
-        if name isnt newSpecies.name then return new Error(
-            "Expected to be name #{name} and not #{newSpecies.name}")
+        debug "name=#{name}"
+        debug "newSpecies.getName()=#{newSpecies.getName()}"
+        if name isnt newSpecies.getName() then return new Error(
+            "Expected to be name #{name} and not #{newSpecies.getName()}")

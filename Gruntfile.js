@@ -193,6 +193,9 @@ module.exports = function (grunt) {
         env: {
             lib: {
                 LD_LIBRARY_PATH: '../sandbox.cpp/build'
+            },
+            debug: {
+                DEBUG: '*'
             }
         },
         cucumberjs: {
@@ -284,6 +287,7 @@ module.exports = function (grunt) {
         'jasmine_node:test',
         'mochaTest',
         'env:lib',
+        'env:debug',
         'cucumberjs:features'
     ]);
     grunt.registerTask('doc', [

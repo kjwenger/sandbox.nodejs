@@ -7,7 +7,8 @@ NAN_MODULE_INIT(Species::Init) {
 	tpl->SetClassName(Nan::New("Species").ToLocalChecked());
 	tpl->InstanceTemplate()->SetInternalFieldCount(1);
 
-	Nan::SetPrototypeMethod(tpl, "GetName", GetName);
+	Nan::SetPrototypeMethod(tpl, "getName", GetName);
+	Nan::SetPrototypeMethod(tpl, "setName", SetName);
 
 	constructor.Reset(Nan::GetFunction(tpl).ToLocalChecked());
 	Nan::Set(target, Nan::New("Species").ToLocalChecked(),
@@ -45,6 +46,16 @@ NAN_METHOD(Species::New) {
 
 NAN_METHOD(Species::GetName) {
 	Species* obj = Nan::ObjectWrap::Unwrap<Species>(info.This());
+	info.GetReturnValue().Set(
+			Nan::New(obj->species.getName().c_str()).ToLocalChecked());
+}
+
+NAN_METHOD(Species::SetName) {
+	std::string name = info[0]->IsUndefined()
+			? std::string("")
+			: std::string(*v8::String::Utf8Value(info[0]->ToString()));
+	Species* obj = Nan::ObjectWrap::Unwrap<Species>(info.This());
+	obj->species.setName(name);
 	info.GetReturnValue().Set(
 			Nan::New(obj->species.getName().c_str()).ToLocalChecked());
 }
