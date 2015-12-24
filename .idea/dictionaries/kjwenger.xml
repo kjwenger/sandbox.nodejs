@@ -3,6 +3,7 @@
     <words>
       <w>cflags</w>
       <w>contrib</w>
+      <w>dbpath</w>
       <w>fexceptions</w>
       <w>frtti</w>
       <w>rtti</w>

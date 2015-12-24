@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59f0d0ec-ea54-4823-ab63-eec002bc3d8f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/cpp/taxonomy/genus.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/cpp/taxonomy/genus.hpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/addon.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/addon.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/binding.gyp" afterPath="$PROJECT_DIR$/src/main/binding.gyp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/kjwenger.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/kjwenger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/features/species-steps.toffee" afterPath="$PROJECT_DIR$/src/test/features/species-steps.toffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/cpp/taxonomy/species.cpp" afterPath="$PROJECT_DIR$/src/main/cpp/taxonomy/species.cpp" />
@@ -34,21 +30,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="species.hpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/cpp/taxonomy/species.hpp">
+      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-              <folding />
+            <state vertical-scroll-proportion="0.5971223">
+              <caret line="196" column="24" selection-start-line="196" selection-start-column="24" selection-end-line="196" selection-end-column="24" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <file leaf-file-name="species.hpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/cpp/taxonomy/species.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.5347722">
-              <caret line="174" column="55" selection-start-line="174" selection-start-column="55" selection-end-line="174" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -58,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/cpp/taxonomy/species.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -68,7 +66,17 @@
         <entry file="file://$PROJECT_DIR$/src/test/features/species-steps.toffee">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+              <caret line="109" column="76" selection-start-line="109" selection-start-column="76" selection-end-line="109" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="species-steps.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target/test/features/species-steps.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -78,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/features/species.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -125,13 +133,13 @@
         <option value="$PROJECT_DIR$/src/main/cpp/ontology/topic.cpp" />
         <option value="$PROJECT_DIR$/src/test/features/topic-steps.toffee" />
         <option value="$PROJECT_DIR$/src/main/cpp/taxonomy/genus.cpp" />
-        <option value="$PROJECT_DIR$/src/main/cpp/taxonomy/species.hpp" />
         <option value="$PROJECT_DIR$/src/main/cpp/addon.cpp" />
         <option value="$PROJECT_DIR$/src/main/binding.gyp" />
         <option value="$PROJECT_DIR$/src/main/cpp/taxonomy/genus.hpp" />
+        <option value="$PROJECT_DIR$/src/main/cpp/taxonomy/species.hpp" />
         <option value="$PROJECT_DIR$/src/main/cpp/taxonomy/species.cpp" />
-        <option value="$PROJECT_DIR$/src/test/features/species.feature" />
         <option value="$PROJECT_DIR$/src/test/features/species-steps.toffee" />
+        <option value="$PROJECT_DIR$/src/test/features/species.feature" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
       </list>
     </option>
@@ -203,6 +211,60 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sandbox.nodejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox.nodejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox.nodejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox.nodejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox.nodejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox.nodejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sandbox.nodejs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -587,7 +649,7 @@
       <workItem from="1450867286988" duration="2000" />
       <workItem from="1450881056578" duration="2656000" />
       <workItem from="1450883731808" duration="1383000" />
-      <workItem from="1450904282377" duration="8248000" />
+      <workItem from="1450904282377" duration="10919000" />
     </task>
     <task id="LOCAL-00001" summary="moved mocha test output and ignored generated tests">
       <created>1448901515471</created>
@@ -625,11 +687,17 @@
       <option name="project" value="LOCAL" />
       <updated>1450908036608</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="genus object wrapper">
+      <created>1450912661085</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1450912661085</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27738000" />
+    <option name="totallyTimeSpent" value="30409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="960" extended-state="6" />
@@ -680,13 +748,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="moved mocha test output and ignored generated tests" />
     <MESSAGE value="http://paroga.com/v8cppwrapper.h" />
     <MESSAGE value="working primitive native extension" />
     <MESSAGE value="working nan for real cpp class" />
     <MESSAGE value="relative path to sandbox.cpp" />
     <MESSAGE value="working setter on species object wrapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="working setter on species object wrapper" />
+    <MESSAGE value="genus object wrapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="genus object wrapper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,14 +776,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/cpp/taxonomy/species.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/cpp/taxonomy/species.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1058,7 +1121,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/cpp/taxonomy/species.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1066,15 +1129,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/cpp/taxonomy/species.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/features/species.feature">
+    <entry file="file://$PROJECT_DIR$/target/test/features/species-steps.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="60" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
+          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1082,16 +1145,26 @@
     <entry file="file://$PROJECT_DIR$/src/test/features/species-steps.toffee">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <caret line="109" column="76" selection-start-line="109" selection-start-column="76" selection-end-line="109" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/features/species.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5347722">
-          <caret line="174" column="55" selection-start-line="174" selection-start-column="55" selection-end-line="174" selection-end-column="55" />
-          <folding />
+        <state vertical-scroll-proportion="0.5971223">
+          <caret line="196" column="24" selection-start-line="196" selection-start-column="24" selection-end-line="196" selection-end-column="24" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -17,6 +17,8 @@ private:
 	static NAN_METHOD(New);
 	static NAN_METHOD(GetName);
 	static NAN_METHOD(SetName);
+	static NAN_GETTER(NameGet);
+//	static NAN_SETTER(NameSet);
 	static Nan::Persistent<v8::Function> constructor;
 
 	com::u14n::sandbox::cpp::model::taxonomy::Species species;

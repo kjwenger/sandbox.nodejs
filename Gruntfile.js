@@ -3,9 +3,8 @@
 /*jshint strict:true */
 
 module.exports = function (grunt) {
-    "use strict";
+    'use strict';
     var path = require('path'),
-        toffee_script = 'node_modules/toffee-script/bin/coffee',
         dbpath = path.join(process.cwd(), 'test', 'databases', '2.0');
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -195,18 +194,21 @@ module.exports = function (grunt) {
                 LD_LIBRARY_PATH: '../sandbox.cpp/build'
             },
             debug: {
-                DEBUG: 'species-steps'
+                DEBUG: ''
             }
         },
         cucumberjs: {
             options: {
-                steps: "target/test/features/",
+                steps: 'target/test/features/',
                 format: 'pretty',
                 output: 'target/test/features/report.html',
                 formatHtml: 'html',
                 saveJson: true,
                 theme: 'bootstrap',
-                debug: false
+                debug: false,
+                tags: [
+                    '~@ignore'
+                ]
             },
             features: [
                 'src/test/features/location.feature',

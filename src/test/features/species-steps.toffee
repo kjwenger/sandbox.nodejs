@@ -9,75 +9,114 @@ debug "Species=" + Species
 module.exports = () ->
     newGenus = null
     newSpecies = null
-    this.Given /^I have a new genus$/, () ->
-        if not sandbox_cpp then return new Error(
-          "Expected to have required sandbox_cpp module")
-        if not Genus then return new Error(
-          "Expected to have Genus class")
+    this.Given /^I have a new genus$/, (callback) ->
+        if not sandbox_cpp then return callback(new Error(
+            "Expected to have required sandbox_cpp module"))
+        if not Genus then return callback(new Error(
+            "Expected to have Genus class"))
         newGenus = new Genus()
         debug "newGenus.getName()=#{newGenus.getName()}"
-        if not newGenus then return new Error(
-          "Expected to have new genus")
-    this.Given /^I have the "([^"]*)" genus$/, (name) ->
-        if not sandbox_cpp then return new Error(
-          "Expected to have required sandbox_cpp module")
-        if not Genus then return new Error(
-          "Expected to have Genus class")
+        if not newGenus then return callback(new Error(
+            "Expected to have new genus"))
+        return callback()
+    this.Given /^I have the "([^"]*)" genus$/, (name, callback) ->
+        if not sandbox_cpp then return callback(new Error(
+            "Expected to have required sandbox_cpp module"))
+        if not Genus then return callback(new Error(
+            "Expected to have Genus class"))
         newGenus = new Genus(name)
         debug "newGenus.getName()=#{newGenus.getName()}"
-        if not newGenus then return new Error(
-          "Expected to have new genus")
-    this.When /^I get the genus name$/, () ->
+        if not newGenus then return callback(new Error(
+            "Expected to have new genus"))
+        return callback()
+    this.When /^I get the genus name$/, (callback) ->
         debug "newGenus.getName=#{newGenus.getName}"
-        if not newGenus.getName then return new Error(
-          "Expected to have a name")
-    this.When /^I set the genus name$/, () ->
+        if not newGenus.getName then return callback(new Error(
+            "Expected to have a name"))
+        return callback()
+    this.When /^I set the genus name$/, (callback) ->
         debug "newGenus.setName=#{newGenus.setName}"
-        if not newGenus.setName then return new Error(
-          "Expected to have a name")
-    this.When /^I set the genus name to "([^"]*)"$/, (name) ->
+        if not newGenus.setName then return callback(new Error(
+            "Expected to have a name"))
+        return callback()
+    this.When /^I set the genus name to "([^"]*)"$/, (name, callback) ->
         debug "name=#{name}"
         debug "newGenus.getName()=#{newGenus.getName()}"
         newGenus.setName name
         debug "newGenus.getName()=#{newGenus.getName()}"
-    this.Then /^the genus name should be "([^"]*)"$/, (name) ->
+        return callback()
+    this.Then /^the genus name should be "([^"]*)"$/, (name, callback) ->
         debug "name=#{name}"
         debug "newGenus.getName()=#{newGenus.getName()}"
-        if name isnt newGenus.getName() then return new Error(
-          "Expected to be name #{name} and not #{newGenus.getName()}")
-    this.Given /^I have a new species$/, () ->
-        if not sandbox_cpp then return new Error(
-            "Expected to have required sandbox_cpp module")
-        if not Species then return new Error(
-            "Expected to have Species class")
+        if name isnt newGenus.getName() then return callback(new Error(
+            "Expected to be name #{name} and not #{newGenus.getName()}"))
+        return callback()
+    this.When /^I read the genus "([^"]*)" property$/, (property, callback) ->
+        debug "property=#{property}"
+        debug "newGenus[property]=#{newGenus[property]}"
+        if newGenus[property] is undefined then return callback(new Error(
+            "Expected to have a #{property} property"))
+        return callback()
+    this.Then /^the genus "([^"]*)" property should be "([^"]*)"$/, (property, value, callback) ->
+        debug "property=#{property}"
+        debug "value=#{value}"
+        debug "newGenus[property]=#{newGenus[property]}"
+        debug "value isnt newGenus[property]=#{value isnt newGenus[property]}"
+        if value isnt newGenus[property] then return callback(new Error(
+            "Expected to be #{property} property #{value} and not #{newGenus[property]}"))
+        return callback()
+    this.Given /^I have a new species$/, (callback) ->
+        if not sandbox_cpp then return callback(new Error(
+            "Expected to have required sandbox_cpp module"))
+        if not Species then return callback(new Error(
+            "Expected to have Species class"))
         newSpecies = new Species(newGenus)
         debug "newSpecies.getName()=#{newSpecies.getName()}"
-        if not newSpecies then return new Error(
-            "Expected to have new species")
-    this.Given /^I have the "([^"]*)" species$/, (name) ->
-        if not sandbox_cpp then return new Error(
-            "Expected to have required sandbox_cpp module")
-        if not Species then return new Error(
-            "Expected to have Species class")
+        if not newSpecies then return callback(new Error(
+            "Expected to have new species"))
+        return callback()
+    this.Given /^I have the "([^"]*)" species$/, (name, callback) ->
+        if not sandbox_cpp then return callback(new Error(
+            "Expected to have required sandbox_cpp module"))
+        if not Species then return callback(new Error(
+            "Expected to have Species class"))
         newSpecies = new Species(newGenus, name)
         debug "newSpecies.getName()=#{newSpecies.getName()}"
-        if not newSpecies then return new Error(
-            "Expected to have new species")
-    this.When /^I get the species name$/, () ->
+        if not newSpecies then return callback(new Error(
+            "Expected to have new species"))
+        return callback()
+    this.When /^I get the species name$/, (callback) ->
         debug "newSpecies.getName=#{newSpecies.getName}"
-        if not newSpecies.getName then return new Error(
-            "Expected to have a name")
-    this.When /^I set the species name$/, () ->
+        if not newSpecies.getName then return callback(new Error(
+            "Expected to have a name"))
+        return callback()
+    this.When /^I set the species name$/, (callback) ->
         debug "newSpecies.setName=#{newSpecies.setName}"
-        if not newSpecies.setName then return new Error(
-          "Expected to have a name")
-    this.When /^I set the species name to "([^"]*)"$/, (name) ->
+        if not newSpecies.setName then return callback(new Error(
+            "Expected to have a name"))
+        return callback()
+    this.When /^I set the species name to "([^"]*)"$/, (name, callback) ->
         debug "name=#{name}"
         debug "newSpecies.getName()=#{newSpecies.getName()}"
         newSpecies.setName name
         debug "newSpecies.getName()=#{newSpecies.getName()}"
-    this.Then /^the species name should be "([^"]*)"$/, (name) ->
+        return callback()
+    this.Then /^the species name should be "([^"]*)"$/, (name, callback) ->
         debug "name=#{name}"
         debug "newSpecies.getName()=#{newSpecies.getName()}"
-        if name isnt newSpecies.getName() then return new Error(
-            "Expected to be name #{name} and not #{newSpecies.getName()}")
+        if name isnt newSpecies.getName() then return callback(new Error(
+            "Expected to be name #{name} and not #{newSpecies.getName()}"))
+        return callback()
+    this.When /^I read the species "([^"]*)" property$/, (property, callback) ->
+        debug "property=#{property}"
+        debug "newSpecies[property]=#{newSpecies[property]}"
+        if newSpecies[property] is undefined then return callback(new Error(
+            "Expected to have a #{property} property"))
+        return callback()
+    this.Then /^the species "([^"]*)" property should be "([^"]*)"$/, (property, value, callback) ->
+        debug "property=#{property}"
+        debug "value=#{value}"
+        debug "newSpecies[property]=#{newSpecies[property]}"
+        if value isnt newSpecies[property] then return callback(new Error(
+            "Expected to be #{property} property #{value} and not #{newSpecies[property]}"))
+        return callback()

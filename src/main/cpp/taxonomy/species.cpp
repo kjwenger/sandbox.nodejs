@@ -9,7 +9,13 @@ NAN_MODULE_INIT(Species::Init) {
 
 	Nan::SetPrototypeMethod(tpl, "getName", GetName);
 	Nan::SetPrototypeMethod(tpl, "setName", SetName);
-//	Nan::SetAccessor(tpl, Nan::New("name").ToLocalChecked(), GetName, SetName);
+#if NODE_MODULE_VERSION < IOJS_3_0_MODULE_VERSION
+	v8::Local<v8::Object> exports = Nan::New<v8::Object>(target);
+#else
+	v8::Local<v8::Object> exports = target;
+#endif
+	Nan::SetAccessor(exports, Nan::New("name").ToLocalChecked(),
+			NameGet, 0);
 
 	constructor.Reset(Nan::GetFunction(tpl).ToLocalChecked());
 	Nan::Set(target, Nan::New("Species").ToLocalChecked(),
@@ -56,3 +62,17 @@ NAN_METHOD(Species::SetName) {
 	info.GetReturnValue().Set(
 			Nan::New(species->species.getName().c_str()).ToLocalChecked());
 }
+
+NAN_GETTER(Species::NameGet) {
+	Species* species = Nan::ObjectWrap::Unwrap<Species>(info.This());
+	info.GetReturnValue().Set(
+			Nan::New(species->species.getName().c_str()).ToLocalChecked());
+}
+
+//NAN_SETTER(Species::NameSet) {
+//	std::string name = info[0]->IsUndefined()
+//			? std::string("")
+//			: std::string(*v8::String::Utf8Value(info[0]->ToString()));
+//	Species* species = Nan::ObjectWrap::Unwrap<Species>(info.This());
+//	species->species.setName(name);
+//}
