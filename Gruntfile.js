@@ -1,4 +1,4 @@
-/*global module,require*/
+/*global module,require,process*/
 /*jslint node:true */
 /*jshint strict:true */
 
