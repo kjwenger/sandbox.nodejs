@@ -54,6 +54,8 @@
     "load-grunt-tasks": "~3.3.0",
     "mocha": "~2.3.4",
     "node-gyp": "~3.2.1",
+    "pdfjs": "^2.1.0",
+    "pdfjs-dist": "^2.0.943",
     "proxyquire": "~1.7.3",
     "time-grunt": "~1.2.2",
     "toffee-script": "~1.6.3-4",
